@@ -8,20 +8,32 @@
    {:title "Hi, I'm Bardia Pourvakil"
     :work [{:name "GrantTree"
             :place "London, UK"
-            }
+            :link "https://www.granttree.co.uk"}
            {:name "GDA Capital"
-            :place "Toronto, CA"}]
+            :place "Toronto, CA"
+            :link "https://gda.captial"}]
     :favourite {:books [{:title "Antifragile"
                          :author "Nassim Taleb"}
                         {:title "Impro"
                          :author "Keith Johnstone"}]}}))
 
+(defn book-lister [books]
+  [:ul
+   (for [book books]
+     ^{:key (:title book)} [:li (str (:title book) " - " (:author book))])])
+
 
 (defn app []
-  [:div
-   [:h1 (:title @state)]
-   [:h2 "Favourite books"]
-   [:h2 "Favourite movies"]])
+  (let [grant-tree   ((get-in @state [:work]) 0)
+        gda-capital ((get-in @state [:work]) 1)]
+    [:div
+     [:h1 (:title @state)]
+     [:p "I write for grants for "
+      [:a {:href (:link grant-tree)} (:name grant-tree)] "."]
+     [:p "I do blockchain content marketing for "
+      [:a {:href (:link gda-capital)} (:name gda-capital)] "."]
+     [:h2 "Favourite books"]
+     [book-lister (get-in @state [:favourite :books])]]))
 
 (defn ^:dev/after-load start []
   (rdom/render [app] (js/document.getElementById "app")))
