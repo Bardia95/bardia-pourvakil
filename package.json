@@ -1,0 +1,25 @@
+{
+    "name": "bardia-pourvakil",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "watch": "shadow-cljs watch app",
+        "compile": "shadow-cljs compile app",
+        "release": "shadow-cljs release app",
+        "html": "mkdir -p target && cp assets/index.html target/",
+        "serve": "yarn html && http-server target/",
+        "del": "rm -r target/*",
+        "build": "yarn release && yarn html && yarn serve"
+    },
+    "author": "Bardia Pourvakil",
+    "license": "MIT",
+    "devDependencies": {
+        "http-server": "^0.11.1",
+        "shadow-cljs": "^2.8.39"
+    },
+    "dependencies": {
+        "react": "16.13.0",
+        "react-dom": "16.13.0"
+    }
+}
