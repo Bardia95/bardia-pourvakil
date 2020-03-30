@@ -21,8 +21,6 @@
   [:div
    [:h1 (:title @state)]
    [:h2 "Favourite books"]
-   [:ul
-    (map #([:li (str (:title %) "\n" (:author %))]) get-in @state [:favourite :books])]
    [:h2 "Favourite movies"]])
 
 (defn ^:dev/after-load start []
