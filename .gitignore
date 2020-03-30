@@ -14,5 +14,6 @@ pom.xml.asc
 /node_modules/
 /out/
 .shadow-cljs/
+/target/
 public/js
-.#*
+.#$*
