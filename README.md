@@ -1,4 +1,4 @@
-# Bardia Pourvakil's Personal Site
+# Bardia Pourvakil's Essays
 
 
-## No instructions yet!
+A home for my essays. Some interactive, some not. Some about programming, some not.
