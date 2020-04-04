@@ -6,5 +6,6 @@
  :builds {:app {:target :browser
                 :output-dir "target"
                 :asset-path "."
-                :modules {:bardia-pourvakil {:init-fn bardia-pourvakil.core/init
-                                             :start-fn bardia-pourvakil.core/start}}}}}
+                :modules {:essays
+                          {:init-fn  essays.core/init
+                           :start-fn essays.core/start}}}}}
