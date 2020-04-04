@@ -3,10 +3,8 @@
             [reagent.dom :as rdom]
             [clojure.string :as str]))
 
-
-(defn state (atom {:title "Essays"
-                   :author "Bardia"}))
-
+(def state (atom {:title "Essays"
+                  :author "Bardia"}))
 
 (defn app []
   [:div
