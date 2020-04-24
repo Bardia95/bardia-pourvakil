@@ -1,4 +1,4 @@
-(ns essays.core
+(ns sample.core
   (:require [reagent.core :as r]
             [reagent.dom :as rdom]
             [clojure.string :as str]))
