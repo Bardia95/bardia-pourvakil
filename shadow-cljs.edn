@@ -2,10 +2,10 @@
  :dependencies [[reagent "0.10.0"]
                 [quil "3.1.0"]]
  :dev-http {8080 "target/"}
- :nrepl {:init-ns essays.core}
+ :nrepl {:init-ns sample.core}
  :builds {:app {:target :browser
                 :output-dir "target"
                 :asset-path "."
-                :modules {:essays
-                          {:init-fn  essays.core/init
-                           :start-fn essays.core/start}}}}}
+                :modules {:sample
+                          {:init-fn  sample.core/init
+                           :start-fn sample.core/start}}}}}
